@@ -1,0 +1,29 @@
+{
+  "name": "node-wangyu-bilidown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "bin": {
+    "BiliDown": "./bin/cli.js"
+  },
+  "homepage": "https://github.com/wy-linux/node-wangyu-bilidown",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wy-linux/node-wangyu-bilidown.git"
+  },
+  "scripts": {
+    "cli": "node ./bin/cli.js",
+    "pkg-win": "pkg -t win ./bin/cli.js -o node-wangyu-win-BiliDown",
+    "pkg-linux": "pkg -t linux ./bin/cli.js -o node-wangyu-linux-BiliDown",
+    "pkg-mac": "pkg -t macos ./bin/cli.js -o node-wangyu-macos-BiliDown"
+  },
+  "author": "wangyu",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "node-wangyu-progress": "^1.0.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
