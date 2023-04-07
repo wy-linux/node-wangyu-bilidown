@@ -23,9 +23,13 @@ const Download = require('node-wangyu-bilidown')
 const BiliDown = new Download(
  'https://www.bilibili.com/video/BV1HV4y177gH/?spm_id_from=333.337.search-card.all.click&vd_source=108710f9dc8bf2ee2e2257f9f77a89f7'
 )
-BiliDown.once('downloaded', () => {
-    process.stdout.write('\n视频已下载')
-}) 
+BiliDown.start()
+.then((info) => {
+    console.log(info)
+})
+.catch((err) => {
+   console.log(err)
+})
 ```
 ###### Script
 ```shell
